@@ -14,7 +14,7 @@ import java.util.logging.Logger;
 
 /**
  * Read's a time counter from the synchronization server and
- * then send commands to monitor. In order to compute the next command
+ * then send commands to railway monitor. In order to compute the next command,
  * the <code>schedule</code> table is used.
  * 
  * @author faur
@@ -57,7 +57,7 @@ public class SimulationEngine implements Runnable{
     /**
      * Sets synchronization server port used by this engine.
      * <br>
-     * Please note that this method should be call before {@link Thread#start()} is called,
+     * Please note that this method should be called before {@link Thread#start()} is called,
      * otherwise port 5000 is used.
      * @param syncPort the syncPort to set
      */
@@ -76,7 +76,7 @@ public class SimulationEngine implements Runnable{
     /**
      * Sets synchronization server address used by this engine.
      * <br>
-     * Please note that this method should be call befor {@link Thread#start()} is called,
+     * Please note that this method should be called before {@link Thread#start()} is called,
      * otherwise <code>localhost</code> is used.
      * @param syncAddress the syncAddress to set
      */
