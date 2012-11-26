@@ -31,6 +31,8 @@ public class RailwaySimulator {
     private int controllerPort;
     private String syncServerAddress;
     private int syncServerPort;
+    private String monitorAddress;
+    private int monitorPort;
     
     private Logger logger;
     private List<String> schedule;
@@ -113,6 +115,38 @@ public class RailwaySimulator {
     }
     
     /**
+     * Gets the monitor server port.
+     * @return the syncServerPort
+     */
+    public int getMonitorPort() {
+	return monitorPort;
+    }
+
+    /**
+     * Sets the monitor server port.
+     * @param syncServerPort the syncServerPort to set
+     */
+    public void setMonitorPort(int monitorPort) {
+	this.monitorPort = monitorPort;
+    }
+    
+    /**
+     * Gets the railway monitor server address.
+     * @return the syncServerAddress
+     */
+    public String getMonitorAddress() {
+	return monitorAddress;
+    }
+
+    /**
+     * Sets the railway monitor server adress. 
+     * @param syncServerAddress the syncServerAddress to set
+     */
+    public void setMonitorAddress(String monitorAddress) {
+	this.monitorAddress = monitorAddress;
+    }
+    
+    /**
      * Constructs command line options.
      * 
      * @return Options expected from command-line of Posix form.
@@ -123,6 +157,8 @@ public class RailwaySimulator {
 	posixOptions.addOption("controllerAddress", true, "Controller's network address.");
 	posixOptions.addOption("syncServerPort", true, "Synchronization server port binder.");
 	posixOptions.addOption("syncServerAddress", true, "Synchronization server network address.");
+	posixOptions.addOption("monitorPort", true, "Railway Monitor port binder.");
+	posixOptions.addOption("monitorAddress", true, "Railway Monitor network address.");
 	posixOptions.addOption("help", false, "Display help page.");
 	return posixOptions;
     }
@@ -157,6 +193,12 @@ public class RailwaySimulator {
 	    if (commandLine.hasOption("syncServerAddress")) {
 		this.setSyncServerAddress(commandLine.getOptionValue("syncServerAddress"));
 	    }
+	    if (commandLine.hasOption("monitorPort")) {
+		this.setMonitorPort(Integer.valueOf(commandLine.getOptionValue("monitorPort")));
+	    }
+	    if (commandLine.hasOption("monitorAddress")) {
+		this.setMonitorAddress(commandLine.getOptionValue("monitorAddress"));
+	    }
 	    if (commandLine.hasOption("help")) {
 		help.printHelp(RailwaySimulator.class.getName(), posixOptions, true);
 	    }
@@ -169,9 +211,16 @@ public class RailwaySimulator {
      * Starts railway simulation. 
      */
     public void startSimulationEngine() {
+	// Start schedule engine
 	ScheduleEngine schEngine = new ScheduleEngine(schedule, controllerAddress, controllerPort);
 	Thread tSchEngine = new Thread(schEngine);
 	tSchEngine.start();
+	// Start simulation engine
+	SimulationEngine simEngine = new SimulationEngine(schedule, monitorAddress, monitorPort);
+	simEngine.setSyncAddress(syncServerAddress);
+	simEngine.setSyncPort(syncServerPort);
+	Thread tSimEngine = new Thread(simEngine);
+	tSimEngine.start();
     }
     
     /**
