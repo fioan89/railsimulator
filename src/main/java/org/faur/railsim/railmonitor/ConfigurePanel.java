@@ -64,7 +64,7 @@ public class ConfigurePanel extends JPanel implements ActionListener {
 		btBrowseId = new JButton("Browse");
 		btBrowseId.addActionListener(this);
 		btStart = new JButton("Start Monitoring");
-		// btStart.setEnabled(false);
+		btStart.setEnabled(false);
 		btStart.addActionListener(btStartListener);
 		btExit = new JButton("Exit");
 		btExit.addActionListener(btStartListener);
@@ -83,8 +83,6 @@ public class ConfigurePanel extends JPanel implements ActionListener {
 		txtPanel = new JScrollPane(txtInfo);
 
 		init();
-		this.setMapPath("/home/faur/railsimulator/rail2.csv");
-		this.setIdsPath("/home/faur/railsimulator/ids.csv");
 	}
 
 	protected void init() {

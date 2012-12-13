@@ -68,8 +68,8 @@ public class RailwayMonitor extends JFrame implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		JButton bt = (JButton) e.getSource();
 		if (bt.equals(configurePn.getBtStart())) {
-			String mapPath = "/home/faur/railsimulator/rail1.csv";// configurePn.getMapPath();
-			String idPath = "/home/faur/railsimulator/ids.csv";// configurePn.getIdsPath();
+			String mapPath = configurePn.getMapPath();
+			String idPath =  configurePn.getIdsPath();
 			monitorPn.setRailMapPath(mapPath);
 			monitorPn.startMonitoring();
 			TrainManager tManager = TrainManager.getInstance();
