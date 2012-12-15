@@ -19,35 +19,35 @@ import org.faur.railsim.util.ScheduleUtil;
  * 
  */
 public class ServantController extends Thread {
-	private Logger logger;
-	private Socket client;
-	private List<String> schedule;
+    private Logger logger;
+    private Socket client;
+    private List<String> schedule;
 
-	private PrintWriter writer;
+    private PrintWriter writer;
 
-	/**
-	 * Constructs the servant.
-	 * 
-	 * @param client
-	 * @param schedule
-	 * @param mc
-	 *            Master Controller reference.
-	 */
-	public ServantController(Socket client, List<String> schedule) {
-		this.client = client;
-		this.schedule = schedule;
-		this.logger = Logger.getLogger(ServantController.class.getName());
+    /**
+     * Constructs the servant.
+     * 
+     * @param client
+     * @param schedule
+     * @param mc
+     *            Master Controller reference.
+     */
+    public ServantController(Socket client, List<String> schedule) {
+	this.client = client;
+	this.schedule = schedule;
+	this.logger = Logger.getLogger(ServantController.class.getName());
+    }
+
+    public void run() {
+	try {
+	    writer = new PrintWriter(new OutputStreamWriter(
+		    client.getOutputStream()));
+	    // send schedule.
+	    ScheduleUtil.sendSchedule(writer, schedule);
+
+	} catch (IOException e) {
+	    logger.log(Level.SEVERE, "{0}", e.toString());
 	}
-
-	public void run() {
-		try {
-			writer = new PrintWriter(new OutputStreamWriter(
-					client.getOutputStream()));
-			// send schedule.
-			ScheduleUtil.sendSchedule(writer, schedule);
-
-		} catch (IOException e) {
-			logger.log(Level.SEVERE, "{0}", e.toString());
-		}
-	}
+    }
 }

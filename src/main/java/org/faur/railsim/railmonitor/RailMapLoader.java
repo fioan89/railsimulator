@@ -35,40 +35,40 @@ import java.util.Map;
  *            generic parameter. Usually is a {@link java.awt.Point}
  */
 public interface RailMapLoader<T, U> {
-	/**
-	 * Loads railway from <code>file</code> and return it as a matrix of
-	 * <code>String</code>. <br>
-	 * This file should be encoded with "UTF-8" and should have .csv extension
-	 * 
-	 * @param file
-	 *            where railway map is stored. It is a <code>.csv</code> file
-	 *            encoded int <code>UTF-8</code>.
-	 * @return a <code>T</code> matrix representing the railway map.
-	 */
-	T[][] loadMapFromFile(String file);
+    /**
+     * Loads railway from <code>file</code> and return it as a matrix of
+     * <code>String</code>. <br>
+     * This file should be encoded with "UTF-8" and should have .csv extension
+     * 
+     * @param file
+     *            where railway map is stored. It is a <code>.csv</code> file
+     *            encoded int <code>UTF-8</code>.
+     * @return a <code>T</code> matrix representing the railway map.
+     */
+    T[][] loadMapFromFile(String file);
 
-	/**
-	 * Draws the specified matrix on the specified graphic context and build
-	 * it's location coordinates (Coordination on the screen for train stations
-	 * and track switches ). <br>
-	 * In order to retrieve this coordinates call
-	 * {@link RailMapLoader#getCoordinatesMap()}
-	 * 
-	 * @param panel
-	 *            component context where drawing will take place.
-	 * @param map
-	 *            railway map as <code>T</code> matrix.
-	 */
-	void buildMap(Graphics g, T[][] map);
+    /**
+     * Draws the specified matrix on the specified graphic context and build
+     * it's location coordinates (Coordination on the screen for train stations
+     * and track switches ). <br>
+     * In order to retrieve this coordinates call
+     * {@link RailMapLoader#getCoordinatesMap()}
+     * 
+     * @param panel
+     *            component context where drawing will take place.
+     * @param map
+     *            railway map as <code>T</code> matrix.
+     */
+    void buildMap(Graphics g, T[][] map);
 
-	/**
-	 * Gets the train stations and track switches coordinates. These coordinates
-	 * are stored in a hash map as {@link java.awt.Point} with the name of the
-	 * location as a key. These coordinates represents the <code>x</code> and
-	 * <code>y</code> position on the graphic context where railway will be
-	 * rendered.
-	 * 
-	 * @return a map of the train stations and track switches coordinates.
-	 */
-	Map<T, U> getCoordinatesMap();
+    /**
+     * Gets the train stations and track switches coordinates. These coordinates
+     * are stored in a hash map as {@link java.awt.Point} with the name of the
+     * location as a key. These coordinates represents the <code>x</code> and
+     * <code>y</code> position on the graphic context where railway will be
+     * rendered.
+     * 
+     * @return a map of the train stations and track switches coordinates.
+     */
+    Map<T, U> getCoordinatesMap();
 }
