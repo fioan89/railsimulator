@@ -1,0 +1,372 @@
+<class-diagram version="1.0.11" icons="true" automaticImage="PNG" always-add-relationships="true" generalizations="true" 
+  realizations="true" associations="true" dependencies="true" nesting-relationships="true">  
+  <class id="1" corner="BOTTOM_RIGHT" language="java" name="org.faur.railsim.centralcontroller.DelayManager" 
+    project="railsimulator" file="/railsimulator/src/main/java/org/faur/railsim/centralcontroller/DelayManager.java" 
+    binary="false">    
+    <position height="212" width="283" x="41" y="932"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="2" corner="BOTTOM_RIGHT" language="java" name="org.faur.railsim.centralcontroller.MasterController" 
+    project="railsimulator" file="/railsimulator/src/main/java/org/faur/railsim/centralcontroller/MasterController.java" 
+    binary="false">    
+    <position height="450" width="227" x="561" y="408"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="3" corner="BOTTOM_RIGHT" language="java" name="org.faur.railsim.centralcontroller.ServantController" 
+    project="railsimulator" 
+    file="/railsimulator/src/main/java/org/faur/railsim/centralcontroller/ServantController.java" binary="false">    
+    <position height="161" width="209" x="364" y="932"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="4" corner="BOTTOM_RIGHT" language="java" name="org.faur.railsim.railmonitor.TrainManager" 
+    project="railsimulator" file="/railsimulator/src/main/java/org/faur/railsim/railmonitor/TrainManager.java" 
+    binary="false">    
+    <position height="161" width="157" x="1549" y="1320"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="5" corner="BOTTOM_RIGHT" language="java" name="org.faur.railsim.railmonitor.RailwayMonitorPanel" 
+    project="railsimulator" file="/railsimulator/src/main/java/org/faur/railsim/railmonitor/RailwayMonitorPanel.java" 
+    binary="false">    
+    <position height="246" width="205" x="1244" y="1320"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <interface id="6" corner="BOTTOM_RIGHT" language="java" name="org.faur.railsim.railmonitor.RailMapLoader" 
+    project="railsimulator" file="/railsimulator/src/main/java/org/faur/railsim/railmonitor/RailMapLoader.java" 
+    binary="false">    
+    <position height="110" width="175" x="1214" y="2198"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <class id="7" corner="BOTTOM_RIGHT" language="java" name="org.faur.railsim.railmonitor.CommandExecutor" 
+    project="railsimulator" file="/railsimulator/src/main/java/org/faur/railsim/railmonitor/CommandExecutor.java" 
+    binary="false">    
+    <position height="195" width="367" x="1305" y="932"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="8" corner="BOTTOM_RIGHT" language="java" name="org.faur.railsim.railmonitor.ConfigurePanel" 
+    project="railsimulator" file="/railsimulator/src/main/java/org/faur/railsim/railmonitor/ConfigurePanel.java" 
+    binary="false">    
+    <position height="552" width="192" x="1756" y="1320"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="9" corner="BOTTOM_RIGHT" language="java" name="org.faur.railsim.railmonitor.RailwayMonitor" 
+    project="railsimulator" file="/railsimulator/src/main/java/org/faur/railsim/railmonitor/RailwayMonitor.java" 
+    binary="false">    
+    <position height="161" width="192" x="1714" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="10" corner="BOTTOM_RIGHT" language="java" name="org.faur.railsim.railmonitor.ConnectionManager" 
+    project="railsimulator" file="/railsimulator/src/main/java/org/faur/railsim/railmonitor/ConnectionManager.java" 
+    binary="false">    
+    <position height="246" width="373" x="1320" y="408"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="11" corner="BOTTOM_RIGHT" language="java" name="org.faur.railsim.railmonitor.RailwayMap" 
+    project="railsimulator" file="/railsimulator/src/main/java/org/faur/railsim/railmonitor/RailwayMap.java" 
+    binary="false">    
+    <position height="161" width="214" x="1214" y="1912"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <interface id="12" corner="BOTTOM_RIGHT" language="java" name="org.faur.railsim.railmonitor.ITrain" 
+    project="railsimulator" file="/railsimulator/src/main/java/org/faur/railsim/railmonitor/ITrain.java" binary="false">    
+    <position height="161" width="154" x="1470" y="2198"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <class id="13" corner="BOTTOM_RIGHT" language="java" name="org.faur.railsim.railmonitor.Train" project="railsimulator" 
+    file="/railsimulator/src/main/java/org/faur/railsim/railmonitor/Train.java" binary="false">    
+    <position height="246" width="154" x="1510" y="1912"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="14" corner="BOTTOM_RIGHT" language="java" name="org.faur.railsim.railsimulator.SimulationEngine" 
+    project="railsimulator" file="/railsimulator/src/main/java/org/faur/railsim/railsimulator/SimulationEngine.java" 
+    binary="false">    
+    <position height="348" width="276" x="947" y="932"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="15" corner="BOTTOM_RIGHT" language="java" name="org.faur.railsim.railsimulator.RailwaySimulator" 
+    project="railsimulator" file="/railsimulator/src/main/java/org/faur/railsim/railsimulator/RailwaySimulator.java" 
+    binary="false">    
+    <position height="484" width="198" x="828" y="408"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="16" corner="BOTTOM_RIGHT" language="java" name="org.faur.railsim.railsimulator.ScheduleEngine" 
+    project="railsimulator" file="/railsimulator/src/main/java/org/faur/railsim/railsimulator/ScheduleEngine.java" 
+    binary="false">    
+    <position height="246" width="273" x="634" y="932"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="17" corner="BOTTOM_RIGHT" language="java" name="org.faur.railsim.serversynchronizer.SimulatorListener" 
+    project="railsimulator" 
+    file="/railsimulator/src/main/java/org/faur/railsim/serversynchronizer/SimulatorListener.java" binary="false">    
+    <position height="212" width="191" x="330" y="408"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="18" corner="BOTTOM_RIGHT" language="java" name="org.faur.railsim.serversynchronizer.SynchronizationServer" 
+    project="railsimulator" 
+    file="/railsimulator/src/main/java/org/faur/railsim/serversynchronizer/SynchronizationServer.java" binary="false">    
+    <position height="331" width="187" x="186" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="19" corner="BOTTOM_RIGHT" language="java" name="org.faur.railsim.serversynchronizer.SimulatorSynchronizer" 
+    project="railsimulator" 
+    file="/railsimulator/src/main/java/org/faur/railsim/serversynchronizer/SimulatorSynchronizer.java" binary="false">    
+    <position height="229" width="249" x="41" y="408"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="20" corner="BOTTOM_RIGHT" language="java" name="org.faur.railsim.util.ScheduleUtil" project="railsimulator" 
+    file="/railsimulator/src/main/java/org/faur/railsim/util/ScheduleUtil.java" binary="false">    
+    <position height="324" width="292" x="594" y="1320"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <association id="21">    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="22" name="c"/>      
+      <multiplicity id="23" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="24">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="12"/>  
+  </realization>  
+  <dependency id="25">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="14"/>  
+  </dependency>  
+  <association id="26">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="27" name="mapLoader"/>      
+      <multiplicity id="28" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="29">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="30" name="configPanel"/>      
+      <multiplicity id="31" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="32">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="33" name="monitorPanel"/>      
+      <multiplicity id="34" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="35">    
+    <bendpoint x="1458" y="1912"/>    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="36" name="currentTrains"/>      
+      <multiplicity id="37" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="38">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="1"/>  
+  </dependency>  
+  <association id="39">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="40" name="tManager"/>      
+      <multiplicity id="41" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="42">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="13"/>  
+  </dependency>  
+  <dependency id="43">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="3"/>  
+  </dependency>  
+  <dependency id="44">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="19"/>  
+  </dependency>  
+  <dependency id="45">    
+    <bendpoint x="1479" y="1320"/>    
+    <bendpoint x="1479" y="1912"/>    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="12"/>  
+  </dependency>  
+  <dependency id="46">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="20"/>  
+  </dependency>  
+  <association id="47">    
+    <bendpoint x="1274" y="932"/>    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="48" name="monitorPanel"/>      
+      <multiplicity id="49" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="50">    
+    <bendpoint x="1723" y="408"/>    
+    <bendpoint x="1723" y="932"/>    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="4"/>  
+  </dependency>  
+  <association id="51">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="52" name="trainManager"/>      
+      <multiplicity id="53" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="54">    
+    <bendpoint x="1744" y="932"/>    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="55" name="configPanel"/>      
+      <multiplicity id="56" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="57">    
+    <bendpoint x="1253" y="408"/>    
+    <bendpoint x="1253" y="932"/>    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="58" name="monitorPn"/>      
+      <multiplicity id="59" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="60">    
+    <bendpoint x="603" y="932"/>    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="20"/>  
+  </dependency>  
+  <dependency id="61">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="17"/>  
+  </dependency>  
+  <realization id="62">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="6"/>  
+  </realization>  
+  <dependency id="63">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="20"/>  
+  </dependency>  
+  <association id="64">    
+    <bendpoint x="1702" y="932"/>    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="65" name="tManager"/>      
+      <multiplicity id="66" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="67">    
+    <bendpoint x="1694" y="1912"/>    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="68" name="trainList"/>      
+      <multiplicity id="69" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="70">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="20"/>  
+  </dependency>  
+  <association id="71">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="72" name="con"/>      
+      <multiplicity id="73" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="74">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="16"/>  
+  </dependency>  
+  <association id="75">    
+    <bendpoint x="1765" y="408"/>    
+    <bendpoint x="1765" y="932"/>    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="76" name="configurePn"/>      
+      <multiplicity id="77" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+    visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true"/>    
+    <operations public="true" package="true" protected="true" private="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
