@@ -1,5 +1,6 @@
 package org.faur.railsim.railmonitor;
 
+import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
@@ -94,6 +95,7 @@ public class RailwayMap implements RailMapLoader<String, Point> {
 	// is relative to the drawing area size.
 	if (map != null) {
 	    Graphics2D gContext = (Graphics2D) g;
+	    gContext.setStroke(new BasicStroke(7));
 	    // gContext.setColor(Color.BLACK);
 	    gContext.setFont(new Font("sansserif", Font.BOLD, 10));
 	    Rectangle dimension = g.getClip().getBounds();

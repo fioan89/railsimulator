@@ -50,7 +50,7 @@ public class RailwayMonitorPanel extends JPanel {
 	// load map and train coordinates
 	mapLoader = new RailwayMap();
 	if (mapLoader != null) {
-	    // paintComponent will autoredraw the map while this is not null.
+	    // paintComponent will auto redraw the map while this is not null.
 	    map = mapLoader.loadMapFromFile(railMapPath);
 	    new Thread(new Runnable() {
 		public void run() {
