@@ -145,7 +145,7 @@ public class MasterController<T> {
      * and the maximum time, the vehicle will take in order to visit the
      * corresponding location.
      * 
-     * @param file
+     * @param file a UTF-8 encoded file which contains a list of trains routes.
      * @return a list representing the file lines with one minor change: every
      *         third line will be a fixed time for every location, that fits in
      *         the location's time interval which was read from the file.
@@ -157,7 +157,7 @@ public class MasterController<T> {
 	    reader = new BufferedReader(new InputStreamReader(
 		    new FileInputStream(file), "UTF-8"));
 	    int counter = 0;
-	    String s = null;
+	    String s;
 	    while ((s = reader.readLine()) != null) {
 		counter++;
 		// If we found the "time" line, then, parse it and set a
@@ -170,7 +170,6 @@ public class MasterController<T> {
 		    StringBuilder sb = new StringBuilder("");
 		    while (st.hasMoreTokens()) {
 			String ss = st.nextToken();
-			ss.trim();
 			int val1 = Integer.parseInt(ss.substring(1,
 				ss.indexOf(",")));
 			int val2 = Integer.parseInt(ss.substring(
@@ -190,8 +189,7 @@ public class MasterController<T> {
 	} catch (NumberFormatException e) {
 	    logger.log(Level.SEVERE, "{0}", e.toString());
 	} catch (IOException e) {
-	    // TODO Auto-generated catch block
-	    e.printStackTrace();
+	    logger.log(Level.SEVERE, "Could not read from file!\n{0}", e.toString());
 	} finally {
 	    try {
 		reader.close();
