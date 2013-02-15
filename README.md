@@ -1,4 +1,3 @@
-
                           Railsimulator
 
   What is it?
@@ -28,25 +27,25 @@
   Now we need to build four components. This four modules represent Railsimulator. 
        1. railmonitor (this a graphical user interface that allows you to monitor your railway )
        -----------------------------------------------------------------------------------------
-       ```bash
+       ```
        mvn package -Ponly-railmonitor
        ```
        
        2. railsimulator (this will simulate train vehicles on a railroad)
        -----------------------------------------------------------------
-       ```bash
+       ```
        mvn package -Ponly-railsimulator
        ```
 
        3. centralcontroller (build a schedule for every train and send it to the railsimulator  )
        -----------------------------------------------------------------------------------------
-       ```bash
+       ```
        mvn package -Ponly-centralcontroller
        ```
 
        4. synchronizationserver (synchronize every simulator instance)
        -----------------------------------------------------------------------------------------
-       ```bash
+       ```
        mvn package -Ponly-serversynchronizer
        ```
   Running
@@ -58,23 +57,23 @@
   
        1. Start synchronization server
        -------------------------------
-       ```bash java -jar railsimulator-0.0.1-serversynchronizer.jar port 10000 -threshold 10000 -signaltime 1500
+       ``` java -jar railsimulator-0.0.1-serversynchronizer.jar port 10000 -threshold 10000 -signaltime 1500
        ```
      
        2. Start railmonitor
        --------------------
-       ```bash java -jar railsimulator-0.0.1-railmonitor.jar
+       ``` java -jar railsimulator-0.0.1-railmonitor.jar
        ```
        Then load the railway map and a list with every train id the monitor should handle. Then just press ``` Start Monitoring ```
 
       3. Start centralcontroller
       --------------------------
-      ```bash java -jar railsimulator-0.0.1-centralcontroller.jar -port 16000 -file /path/to/routes.csv
+      ``` java -jar railsimulator-0.0.1-centralcontroller.jar -port 16000 -file /path/to/routes.csv
       ```
 
       4. Start railsimulator
       ----------------------
-      ```bash java -jar railsimulator-0.0.1-railsimulator.jar -controllerPort 16000 -controllerAddress localhost 
+      ``` java -jar railsimulator-0.0.1-railsimulator.jar -controllerPort 16000 -controllerAddress localhost 
               -syncServerPort 10000 -syncServerAddress localhost -monitorPort 5000 -monitorAddress localhost
       ```
   
