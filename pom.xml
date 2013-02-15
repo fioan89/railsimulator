@@ -4,7 +4,7 @@
 
     <groupId>org.faur.railsim</groupId>
     <artifactId>railsimulator</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <packaging>jar</packaging>
 
     <name>railsimulator</name>
@@ -26,6 +26,190 @@
             <groupId>commons-cli</groupId>
             <artifactId>commons-cli</artifactId>
             <version>1.2</version>
+            <scope>compile</scope>
         </dependency>
+
     </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.0</version>
+                    <configuration>
+                        <source>1.6</source>
+                        <target>1.6</target>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>only-railmonitor</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                        <artifactId>maven-jar-plugin</artifactId>
+                        <configuration>
+
+                            <classifier>railmonitor</classifier>
+
+                            <includes>
+                                <include>org/faur/railsim/railmonitor/**</include>
+                            </includes>
+
+                            <excludes>
+                                <exclude>org/faur/railsim/railsimulator/**</exclude>
+                                <exclude>org/faur/railsim/centralcontroller/**</exclude>
+                                <exclude>org/faur/railsim/serversynchronizer/**</exclude>
+                            </excludes>
+
+                            <archive>
+                                <manifest>
+                                    <addClasspath>true</addClasspath>
+                                    <mainClass>org.faur.railsim.railmonitor.RailwayMonitor</mainClass>
+                                </manifest>
+                            </archive>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
+            <id>only-railsimulator</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                        <artifactId>maven-jar-plugin</artifactId>
+                        <configuration>
+
+                            <classifier>railsimulator</classifier>
+
+                            <includes>
+                                <include>org/faur/railsim/railsimulator/**</include>
+                                <include>org/faur/railsim/util/**</include>
+                            </includes>
+
+                            <excludes>
+                                <exclude>org/faur/railsim/railmonitor/**</exclude>
+                                <exclude>org/faur/railsim/centralcontroller/**</exclude>
+                                <exclude>org/faur/railsim/serversynchronizer/**</exclude>
+                            </excludes>
+
+                            <archive>
+                                <manifest>
+                                    <addClasspath>true</addClasspath>
+                                    <mainClass>org.faur.railsim.railsimulator.RailwaySimulator</mainClass>
+                                </manifest>
+                            </archive>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+            <dependencies>
+                <dependency>
+                    <groupId>commons-cli</groupId>
+                    <artifactId>commons-cli</artifactId>
+                    <version>1.2</version>
+                </dependency>
+            </dependencies>
+        </profile>
+
+        <profile>
+            <id>only-centralcontroller</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                        <artifactId>maven-jar-plugin</artifactId>
+                        <configuration>
+
+                            <classifier>centralcontroller</classifier>
+
+                            <includes>
+                                <include>org/faur/railsim/centralcontroller/**</include>
+                                <include>org/faur/railsim/util/**</include>
+                            </includes>
+
+                            <excludes>
+                                <exclude>org/faur/railsim/railsimulator/**</exclude>
+                                <exclude>org/faur/railsim/railmonitor/**</exclude>
+                                <exclude>org/faur/railsim/serversynchronizer/**</exclude>
+                            </excludes>
+
+                            <archive>
+                                <manifest>
+                                    <addClasspath>true</addClasspath>
+                                    <mainClass>org.faur.railsim.centralcontroller.MasterController</mainClass>
+                                </manifest>
+                            </archive>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+            <dependencies>
+                <dependency>
+                    <groupId>commons-cli</groupId>
+                    <artifactId>commons-cli</artifactId>
+                    <version>1.2</version>
+                </dependency>
+            </dependencies>
+        </profile>
+
+        <profile>
+            <id>only-serversynchronizer</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                        <artifactId>maven-jar-plugin</artifactId>
+                        <configuration>
+
+                            <classifier>serversynchronizer</classifier>
+
+                            <includes>
+                                <include>org/faur/railsim/serversynchronizer/**</include>
+                            </includes>
+
+                            <excludes>
+                                <exclude>org/faur/railsim/railsimulator/**</exclude>
+                                <exclude>org/faur/railsim/centralcontroller/**</exclude>
+                                <exclude>org/faur/railsim/railmonitor/**</exclude>
+                            </excludes>
+
+                            <archive>
+                                <manifest>
+                                    <addClasspath>true</addClasspath>
+                                    <mainClass>org.faur.railsim.serversynchronizer.SynchronizationServer</mainClass>
+                                </manifest>
+                            </archive>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+            <dependencies>
+                <dependency>
+                    <groupId>commons-cli</groupId>
+                    <artifactId>commons-cli</artifactId>
+                    <version>1.2</version>
+                </dependency>
+            </dependencies>
+        </profile>
+    </profiles>
+
 </project>

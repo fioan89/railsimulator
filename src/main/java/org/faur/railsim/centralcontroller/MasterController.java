@@ -31,7 +31,7 @@ import org.faur.railsim.util.ScheduleUtil;
  * @author faur
  * @since December 04 2012
  * @param <T>
- *            a generic parameter, most usualy a <code>String</code>.
+ *            a generic parameter, most usually a <code>String</code>.
  */
 public class MasterController<T> {
     private List<T> locations;
@@ -39,7 +39,7 @@ public class MasterController<T> {
     private int port;
     private String fileLocation;
 
-    private ServerSocket server;
+    ServerSocket server;
     private List<Socket> clients;
     private boolean isAlive;
 
